@@ -1,0 +1,290 @@
+/* ESTILOS GENERALES */
+body{
+  background: #d1defa;
+  font-family: sans-serif,Arial,Helvetica;
+  text-align: center ;
+  padding: 0px;
+  margin: 0px;
+}
+
+.layout{
+  width:100%;
+  height: auto;
+  display: grid;
+  grid-template-areas:
+      "header header header header"
+      "nav nav nav nav"
+      "content content content lateral"
+      "footer footer footer footer"
+  ;
+  grid-template-rows: 100px 70px auto 70px;
+}
+
+/* ESTILOS CABECERA */
+.header{
+  grid-area:header ;
+
+  background: white;
+  text-align: left;
+  font-style:italic;
+
+  display: flex;
+  justify-content: center;
+}
+
+.formulario{
+  text-align: left;
+  margin-left:30px;
+}
+
+.header h1{
+  margin-left: 15px;
+  margin-top: 30px;
+}
+
+/* ESTILOS DE LA BARRA DE NAVEGACION */
+.nav{
+  grid-area:nav ;
+  background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%) ;
+}
+
+.nav > ul{
+  display:flex;
+  justify-content: right;
+  align-items: center;
+  list-style: none;
+}
+
+.nav li{
+  padding: 10px;
+}
+
+.nav a{
+  display:block;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size:18px;
+  font-weight: lighter;
+  color:white;
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+.nav a:hover{
+  transform: scale(1.1,1.1)
+}
+
+/* ESTILOS PARA EL CONTENIDO PRINCIPAL */
+
+.content{
+  grid-area:content ;
+  background: #f6f7f9;
+
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  align-items:flex-start;
+}
+
+.contentHome{
+  grid-area:content ;
+  background: #7aa9dfbb;
+  padding:20px;
+  color:#020a40
+}
+
+.mascota-item{
+  flex-grow:1;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px #ddd;
+  margin:20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+
+button,
+input[type="submit"],
+input[type="button"]{
+  background:#0b70e1 ;
+  width:200px;
+  color:white;
+  border:0;
+  outline:0;
+  padding: 15px;
+  border-radius: 3px;
+  margin-top :15px;
+  margin-bottom:10px;
+  text-transform: capitalize ;
+  font-size: 16px ;
+  font-weight: 500px ;
+  cursor:pointer;
+  transition: all 300ms;
+}
+
+.formPatron input{
+  margin-top: 15px;
+  height: 30px;
+  width: 200px;
+}
+
+.formPatron{
+  width:350px;
+  background-color: #8cacd2;
+  padding:20px;
+  margin:20px;
+  border-radius: 20px;
+}
+
+.formPatron button{
+  width:auto;
+}
+
+.formPatron button:disabled{
+  background-color:rgb(136, 134, 134) ;
+  color:#dfe2e8
+}
+
+.bienvenida{
+  color:white;
+  position:absolute;
+  left:10px;
+  font-size: large;
+}
+
+.mascota-item .pedido{
+  margin-right: 8px;
+  width: 150px;
+}
+
+.mascota-item .pedido:hover{
+  background: #e77b00;
+}
+
+.mascota-item .delete:disabled{
+  background: #b4b3b2;
+  color:#ddd;
+}
+
+.mascota-item .delete:hover{
+  background: #9b0202;
+}
+
+.mascota-item .cuadroPedido{
+  padding:5px;
+  background-color: #8cacd2;
+  border-radius: 5px;
+}
+
+.listasGrid{
+  display:grid;
+  grid-template-areas:'listaVen listaMasDue'
+}
+
+.listaVendedor{
+  text-align: left;
+  background-color: #8cacd2;
+  margin:10px;
+  /* height: 20px; */
+}
+
+.vendedor{
+  grid-area:listaVen;
+  background-color:#0e73e4;
+  padding-top: 1px;
+  border-radius: 10px;
+  margin:30px;
+  padding:10px;
+ }
+
+ .mascotaDueno{
+  grid-area:listaMasDue;
+  background-color:#0e73e4;
+  padding-top: 1px;
+  border-radius: 10px;
+  margin:30px;
+  padding:10px;
+ }
+
+.historico div {
+ background-color:#0e73e4;
+ padding-top: 1px;
+ border-radius: 10px;
+}
+
+.historico li{
+  padding: 0px 10px;
+  text-align: left;
+}
+
+.historico ul{
+  padding-top:10px;
+  padding-bottom: 10px;
+  background-color:rgb(156, 145, 227);
+}
+
+.lateral{
+  grid-area: lateral ;
+  background: #bcdff3;
+  border-left:1px solid #ddd;
+  padding:20px;
+}
+
+.lateral .nosotros{
+  display:block;
+  margin: 0px auto;
+  width:300px; 
+  background-color: #124d90;
+  color:#d1defa;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.lateral > div{
+  box-sizing:border-box;
+  width: 90%;
+  margin: 20px;
+  padding:20px;
+  padding-top:10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px #ddd;
+}
+
+.lateral input[type="text"],
+.lateral input[type="number"],
+.lateral textarea{
+  display:block;
+  margin: 0 auto;
+  margin-top:15px;
+  padding: 12px;
+  border-radius: 5px;
+  background: #f6f7f9;
+  color: #454545;
+  width: 80%;
+  opacity:4;
+  outline:0;
+  border-color:transparent;
+}
+
+.pequeña{
+  height: 50px;
+}
+
+.grande{
+  height: 300px;
+}
+
+/* ESTILOS PARA EL PIE DE PAGINA */
+.footer{
+  grid-area:footer ;
+  background: #d1defa;
+  color:#454545;
+  border-top:1px solid white;
+  text-align: left;
+  line-height: 68px;
+  padding-left: 25px;
+}
